@@ -32,12 +32,10 @@
   }
 
   /* Active nav link */
-  const path = window.location.pathname.split('/').pop() || 'index.html';
+  const path = window.location.pathname.replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav-links a').forEach(a => {
-    const href = a.getAttribute('href');
-    if (href === path || (path === '' && href === 'index.html')) {
-      a.classList.add('active');
-    }
+    const href = a.getAttribute('href').replace(/\/$/, '') || '/';
+    if (href === path) a.classList.add('active');
   });
 })();
 
