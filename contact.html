@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Bulat Advisory</title>
+  <meta name="description" content="Schedule a 30-minute intro call with Bulat Advisory. No deck, no hard sell — just a direct conversation about your business." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="interior.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Bulat Advisory home">
+      <span class="nav-logo-name">Bulat Advisory</span>
+      <span class="nav-logo-tag">Fractional FP&amp;A for growth-stage companies.</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="contact.html" class="nav-cta">Schedule a Call</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Page Header ─────────────────────────────────────────── -->
+<header class="page-header" aria-labelledby="page-title">
+  <div class="container">
+    <p class="label" style="margin-bottom:20px">Get in touch</p>
+    <h1 class="display-xl" id="page-title">Let's talk.</h1>
+    <p class="subhead">
+      30 minutes, no obligation. We'll tell you honestly if we're the right fit.
+    </p>
+  </div>
+</header>
+
+<!-- ── Contact Layout ──────────────────────────────────────── -->
+<section class="section contact-section" aria-label="Contact form and details">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Form -->
+      <div class="contact-form-wrap reveal">
+        <h2 class="display-sm" style="margin-bottom:32px">Send us a message</h2>
+        <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="first-name">First Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="first-name" name="first-name" autocomplete="given-name" required />
+            </div>
+            <div class="form-field">
+              <label for="last-name">Last Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="last-name" name="last-name" autocomplete="family-name" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="company">Company <span aria-hidden="true">*</span></label>
+              <input type="text" id="company" name="company" autocomplete="organization" required />
+            </div>
+            <div class="form-field">
+              <label for="website">Company Website</label>
+              <input type="url" id="website" name="website" placeholder="https://" autocomplete="url" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="title">Your Role <span aria-hidden="true">*</span></label>
+              <input type="text" id="title" name="title" autocomplete="organization-title" required />
+            </div>
+            <div class="form-field">
+              <label for="headcount">Company Headcount</label>
+              <div class="select-wrap">
+                <select id="headcount" name="headcount">
+                  <option value="">Select range</option>
+                  <option>Under 10</option>
+                  <option>10–30</option>
+                  <option>30–75</option>
+                  <option>75–150</option>
+                  <option>150+</option>
+                </select>
+                <span class="select-arrow" aria-hidden="true">↓</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="funding">Most Recent Funding Round</label>
+            <div class="select-wrap">
+              <select id="funding" name="funding">
+                <option value="">Select stage</option>
+                <option>Bootstrapped</option>
+                <option>Pre-Seed</option>
+                <option>Seed</option>
+                <option>Series A</option>
+                <option>Series B</option>
+                <option>Series C or later</option>
+              </select>
+              <span class="select-arrow" aria-hidden="true">↓</span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">What are you trying to solve? <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="4" placeholder="Briefly describe what you're working through and what kind of support you're looking for." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:16px 32px; font-size:0.9rem">
+            Send Message
+          </button>
+          <p class="form-note body-sm" style="margin-top:12px; color:var(--text-light); text-align:center">
+            We respond to all inquiries within one business day.
+          </p>
+        </form>
+      </div>
+
+      <!-- Details -->
+      <div class="contact-details reveal reveal-delay-2">
+        <div class="contact-detail-block">
+          <div class="detail-label label">Direct Email</div>
+          <a href="mailto:hello@bulatadvisory.com" class="detail-value detail-link">hello@bulatadvisory.com</a>
+        </div>
+        <div class="contact-detail-block">
+          <div class="detail-label label">LinkedIn</div>
+          <a href="https://www.linkedin.com/in/maxim-bulat/" target="_blank" rel="noopener noreferrer" class="detail-value detail-link">linkedin.com/in/maxim-bulat</a>
+        </div>
+        <div class="contact-detail-block">
+          <div class="detail-label label">Location</div>
+          <div class="detail-value">Greater Boston, Massachusetts</div>
+          <div class="detail-sub">Serving clients nationally — fully remote</div>
+        </div>
+        <div class="contact-detail-block schedule-block">
+          <div class="detail-label label">Prefer to book directly?</div>
+          <a href="#" class="btn-ghost" style="margin-top:10px; display:inline-flex">
+            Schedule a 30-Minute Intro Call <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── What to Expect ───────────────────────────────────────── -->
+<section class="section expect-section" aria-labelledby="expect-heading">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label"><span class="label">After you reach out</span></div>
+      <h2 class="display-lg" id="expect-heading">What happens next</h2>
+    </div>
+    <div class="expect-steps">
+      <div class="expect-step reveal reveal-delay-1">
+        <div class="expect-num" aria-hidden="true">1</div>
+        <div class="expect-body">
+          <h3 class="display-sm">We respond within one business day</h3>
+          <p class="body-md" style="margin-top:10px; color:var(--text-mid)">Directly from Maxim.</p>
+        </div>
+      </div>
+      <div class="expect-step reveal reveal-delay-2">
+        <div class="expect-num" aria-hidden="true">2</div>
+        <div class="expect-body">
+          <h3 class="display-sm">We schedule a 30-minute call</h3>
+          <p class="body-md" style="margin-top:10px; color:var(--text-mid)">No deck, no pitch.</p>
+        </div>
+      </div>
+      <div class="expect-step reveal reveal-delay-3">
+        <div class="expect-num" aria-hidden="true">3</div>
+        <div class="expect-body">
+          <h3 class="display-sm">We give you an honest answer on fit</h3>
+          <p class="body-md" style="margin-top:10px; color:var(--text-mid)">If we're right for you, we'll say so. If we're not, we'll tell you that too.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Reassurance ──────────────────────────────────────────── -->
+<section class="reassurance-section" aria-label="Final note">
+  <div class="container">
+    <div class="reassurance-inner reveal">
+      <p class="reassurance-text">
+        We keep our client roster intentionally small. If you're thinking about reaching out — now is the right time.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ───────────────────────────────────────────────── -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="footer-logo-name">Bulat Advisory</div>
+      <div class="footer-logo-tag">Fractional FP&amp;A for growth-stage companies.</div>
+      <div class="footer-copy">&copy; 2025 Bulat Advisory. All rights reserved.</div>
+    </div>
+    <ul class="footer-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+    </ul>
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/maxim-bulat/" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
