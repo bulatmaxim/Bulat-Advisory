@@ -63,29 +63,55 @@
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
+
     const btn = form.querySelector('[type="submit"]');
-    const orig = btn.textContent;
-    btn.textContent = 'Message sent —';
-    btn.disabled = true;
-    btn.style.background = '#2d6a4f';
-
     const note = form.querySelector('.form-note');
-    if (note) {
-      note.textContent = "Thanks — we'll be in touch within one business day.";
-      note.style.color = '#2d6a4f';
-    }
+    const origText = btn.textContent;
 
-    setTimeout(() => {
-      btn.textContent = orig;
-      btn.disabled = false;
-      btn.style.background = '';
-      form.reset();
-      if (note) {
-        note.textContent = 'We respond to all inquiries within one business day.';
-        note.style.color = '';
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const data = Object.fromEntries(new FormData(form));
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const json = await res.json();
+
+      if (res.ok && json.success) {
+        btn.textContent = 'Message sent ✓';
+        btn.style.background = '#2d6a4f';
+        if (note) {
+          note.textContent = "Thanks — we'll be in touch within one business day.";
+          note.style.color = '#2d6a4f';
+        }
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = origText;
+          btn.disabled = false;
+          btn.style.background = '';
+          if (note) {
+            note.textContent = 'We respond to all inquiries within one business day.';
+            note.style.color = '';
+          }
+        }, 5000);
+      } else {
+        throw new Error(json.message || 'Submission failed');
       }
-    }, 4000);
+    } catch (err) {
+      btn.textContent = 'Something went wrong — please try again';
+      btn.style.background = '#c0392b';
+      btn.disabled = false;
+      setTimeout(() => {
+        btn.textContent = origText;
+        btn.style.background = '';
+      }, 4000);
+    }
   });
 })();
