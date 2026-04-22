@@ -37,7 +37,7 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: rgba(12, 26, 46, 0.52);
+  background: rgba(12, 26, 46, 0.68);
   pointer-events: none;
   z-index: 0;
 }
