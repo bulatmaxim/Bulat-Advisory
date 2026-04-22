@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git config *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(sed -i 's|<title>Bulat Advisory — Fractional FP&amp;A for Growth-Stage Companies</title>|<title>Bulat Advisory</title>|' index.html)",
+      "Bash(sed -i 's|<title>Services — Bulat Advisory</title>|<title>Bulat Advisory</title>|' services.html)",
+      "Bash(sed -i 's|<title>About — Bulat Advisory</title>|<title>Bulat Advisory</title>|' about.html)",
+      "Bash(sed -i 's|<title>Contact — Bulat Advisory</title>|<title>Bulat Advisory</title>|' contact.html)",
+      "Bash(git commit *)",
+      "Bash(python -c \"from PIL import Image; print\\('pillow ok'\\)\")",
+      "Bash(magick --version)",
+      "Bash(python3 -c \"from PIL import Image; print\\('ok'\\)\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); const buf=fs.readFileSync\\('c:/Users/bulat/OneDrive/Desktop/Website/brand_assets/Logo Main.png'\\); console.log\\('size:', buf.length, 'bytes'\\);\")",
+      "Bash(powershell -Command 'Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\('\\\\''c:\\\\Users\\\\bulat\\\\OneDrive\\\\Desktop\\\\Website\\\\brand_assets\\\\Logo Main.png'\\\\''\\); Write-Host $img.Width $img.Height')"
+    ]
+  }
+}
